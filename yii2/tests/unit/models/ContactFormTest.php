@@ -2,7 +2,7 @@
 
 namespace tests\unit\models;
 
-use app\models\Curler;
+use app\models\Code;
 use yii\mail\MessageInterface;
 
 class ContactFormTest extends \Codeception\Test\Unit
@@ -14,7 +14,7 @@ class ContactFormTest extends \Codeception\Test\Unit
 
     public function testEmailIsSentOnContact()
     {
-        $model = new Curler();
+        $model = new Code();
 
         $model->attributes = [
             'name' => 'Tester',

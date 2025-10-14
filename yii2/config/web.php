@@ -16,9 +16,14 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '0RElI-4-IjL1z44VKjGii9Dp_dBhYRg8',
         ],
+//        'cache' => [
+//            'class' => 'yii\caching\FileCache',
+//        ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => 'yii\redis\Cache',
+            'redis' => 'redis', // ID of the redis connection component
         ],
+
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
@@ -44,7 +49,7 @@ $config = [
         'db' => $db,
         'redis' => [
             'class' => 'yii\redis\Connection',
-            'hostname' => 'localhost',
+            'hostname' => 'redis',
             'port' => 6379,
             'database' => 0,
         ],

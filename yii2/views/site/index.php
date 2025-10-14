@@ -1,9 +1,9 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var Curler $model */
+/** @var Code $model */
 
-use app\models\Curler;
+use app\models\Code;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -47,7 +47,7 @@ $this->registerJs($js);
             'id' => 'login-form',
             'options' => ['class' => 'form-horizontal'],
             ]) ?>
-            <?= $form->field($model, 'input') ?>
+            <?= $form->field($model, 'name') ?>
 
             <div class="form-group">
                 <div class="col-lg-offset-1 col-lg-11">
