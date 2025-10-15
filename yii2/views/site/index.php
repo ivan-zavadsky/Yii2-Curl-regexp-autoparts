@@ -47,11 +47,14 @@ $this->registerJs($js);
             'id' => 'login-form',
             'options' => ['class' => 'form-horizontal'],
             ]) ?>
-            <?= $form->field($model, 'name') ?>
+            <?= $form->field($model, 'name')->label('Code to search') ?>
 
             <div class="form-group">
                 <div class="col-lg-offset-1 col-lg-11">
-                    <?= Html::submitButton('Process', ['class' => 'btn btn-primary']) ?>
+                    <?= Html::submitButton(
+                        'Get products\' data',
+                        ['class' => 'btn btn-primary']
+                    ) ?>
                 </div>
             </div>
             <?php ActiveForm::end() ?>
